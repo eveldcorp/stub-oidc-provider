@@ -4,7 +4,8 @@ const uuid = require('uuid/v4');
 class Account {
   constructor(id, principalName) {
     this.pid = id || uuid();
-    this.accountUuid = uuid();
+    // this.accountUuid = uuid();
+    this.accountUuid = id || uuid();
     this.principalName = principalName;
     const accountId = this.pid + ':' + principalName;
     this.accountId = accountId;
